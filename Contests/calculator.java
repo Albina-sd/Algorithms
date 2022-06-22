@@ -3,9 +3,8 @@ package com.example.algorithms.contest;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class rostelecom {
+public class calculator {
 
-    // 1+2*3+(10+2*3)
 
     public static String calc (String str){
         String res = "";
@@ -134,13 +133,11 @@ public class rostelecom {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // 1+2*3+(10+2*3)
+        
         String str = scanner.next();
         int res = Result(str);
         System.out.println(res);
-
-//        System.out.println("(1+2*2)*2+2*5+(4+4*3)");
-//        int res = Result("(1+2*2)*2+2*5+(4+4*3)");
-//        System.out.println(res);
 
     }
 }
