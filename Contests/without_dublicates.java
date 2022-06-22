@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class test {
+public class without_dublicates {
 
     public static double[] task (double[] a) throws IllegalArgumentException{
         Double b[] = new Double[a.length];
