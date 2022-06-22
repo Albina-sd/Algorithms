@@ -32,7 +32,6 @@ public class calculator {
         String mass [] = str.split("\\*");
 
         for (int i = 0; i < mass.length; i++){
-            //System.out.println(mass[i]);
             res *= Integer.parseInt(mass[i]);
         }
 
@@ -46,14 +45,12 @@ public class calculator {
         int k = str.indexOf("+");
         int n = str.indexOf("*");
 
-        //System.out.format("k = {%d}, n = {%d}\n",k,n);
         // добавляем слагаемые до умножения в итоговую строку
         if (k != -1 && k < n){
             String nach = str.substring(0,n);
             n = nach.lastIndexOf("+");
             sb2.append(str.substring(0, n+1));
             sb.replace(0, n+1, "");
-            //System.out.println("before mult: " + sb2.toString());
         }
 
         do{
@@ -75,9 +72,8 @@ public class calculator {
                 }
             }
 
-        }while (sb.length() != 0); // ???
-
-        //System.out.println("res mult: " + sb2.toString());
+        }while (sb.length() != 0);
+        
         return sb2.toString();
     }
 
@@ -90,11 +86,8 @@ public class calculator {
             int k = sb.indexOf(")");
 
             if (n > -1){
-                //System.out.println(sb.substring(n+1, k));
                 String res1 = calc(sb.substring(n+1, k));
-                //System.out.println("res backets: "+ res1);
                 sb.replace(n,k+1, res1);
-                //System.out.println("After brackets:"+ sb);
             }
 
         }while (n != -1);
@@ -107,7 +100,6 @@ public class calculator {
         String mass [] = str.split("\\+");
 
         for (int i = 0; i < mass.length; i++){
-            //System.out.println("summ[i]: " + mass[i]);
             res += Integer.parseInt(mass[i]);
         }
 
@@ -123,7 +115,6 @@ public class calculator {
 
         // перемножаем все что не в скобках
         String str_m = calc(str_b);
-        //System.out.println("calc after brackets: "+str_m);
 
         res = summ(str_m);
 
